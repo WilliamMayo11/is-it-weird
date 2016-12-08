@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Main/Main.jsx';
-import PromptForm from './PromptForm/PromptForm.jsx';
+import Main from './components/Main/Main.jsx';
+import PromptForm from './components/PromptForm/PromptForm.jsx';
 import './App.css';
 
 class App extends Component {

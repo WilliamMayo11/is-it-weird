@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App.jsx';
-import Main from './Main/Main.jsx';
-import PromptForm from './PromptForm/PromptForm.jsx';
+import Main from './components/Main/Main.jsx';
+import PromptForm from './components/PromptForm/PromptForm.jsx';
 import { Route, IndexRoute } from 'react-router';
 
 module.exports = (
