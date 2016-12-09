@@ -15,6 +15,7 @@ class Main extends Component {
         <QuoteList
           quote={this.props.quote}
           quotes={this.props.quotes}
+          updateFormComment={this.props.updateFormComment.bind(this)}
         />
       </div>
     );

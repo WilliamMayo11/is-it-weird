@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Main from './components/Main/Main.jsx';
 import PromptForm from './components/PromptForm/PromptForm.jsx';
 import QuoteList from './components/QuoteList/QuoteList.jsx';
-import Quoteitem from './components/QuoteItem/QuoteItem.jsx';
+import QuoteItem from './components/QuoteItem/QuoteItem.jsx';
 import './App.css';
 
 class App extends Component {
@@ -13,10 +13,9 @@ class App extends Component {
     super();
     this.state = {
       quote: '',
-      quotes: []
-
+      quotes: [],
+      comment: ''
     };
-    this.getAllQuotes = this.getAllQuotes.bind(this)
 }
 
   updateFormQuote(e) {
@@ -26,7 +25,14 @@ class App extends Component {
   console.log(this.state.quote);
   }
 
-  handleFormSubmit() {
+  updateFormComment(e) {
+    this.setState({
+      comment: e.target.value
+  });
+  console.log(this.state.comment);
+  }
+
+  handleQuoteSubmit() {
     fetch('/db/quote', {
       headers: {
         'Content-Type': 'application/json'
@@ -41,6 +47,12 @@ class App extends Component {
     }))
     // .then(this.getAllQuotes())
     .catch(err => console.log(err));
+  }
+
+  handleCommentSubmit() {
+    fetch('/db/comment', {
+
+    })
   }
 
   getAllQuotes() {
@@ -65,9 +77,11 @@ class App extends Component {
         {this.props.children && React.cloneElement(this.props.children, {
           quote: this.state.quote,
           quotes: this.state.quotes,
+          comment: this.state.comment,
           updateFormQuote: (event) => this.updateFormQuote(event),
-          handleFormSubmit: ()=> this.handleFormSubmit(),
-          getAllQuotes: ()=> this.getAllQuotes()
+          handleQuoteSubmit: ()=> this.handleQuoteSubmit(),
+          getAllQuotes: ()=> this.getAllQuotes(),
+          updateFormComment: this.updateFormComment.bind(this)
         })}
       </div>
       </div>

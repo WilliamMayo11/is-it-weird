@@ -12,6 +12,8 @@ class QuoteList extends Component {
       <QuoteItem
         key={i}
         content={quote.content}
+        comment={this.props.comment}
+        updateFormComment={this.props.updateFormComment.bind(this)}
        />
     );
   }

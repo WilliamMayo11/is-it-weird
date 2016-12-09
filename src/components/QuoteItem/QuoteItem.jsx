@@ -6,7 +6,12 @@ import { Link } from 'react-router';
     render() {
   return (
     <div>
-      <p>Is it weird that I {this.props.content}?</p>
+      <h3>Is it weird that I {this.props.content}?</h3>
+      <p>Comment on this:</p>
+      <form>
+        <input type="text" value={this.props.comment} onChange={(event) => this.props.updateFormComment(event)} />
+
+      </form>
 
     </div>
     );

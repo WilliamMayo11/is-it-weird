@@ -15,7 +15,7 @@ import { Link } from 'react-router';
       <form>
         <input type="text" value={this.props.quote} onChange={this.props.updateFormQuote} />
         <Link to="Main">
-          <button onClick={this.props.handleFormSubmit} >Submit</button>
+          <button onClick={this.props.handleQuoteSubmit} >Submit</button>
         </Link>
       </form>
     </div>
