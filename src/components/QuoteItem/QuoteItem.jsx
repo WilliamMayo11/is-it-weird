@@ -10,6 +10,7 @@ import { Link } from 'react-router';
       <p>Comment on this:</p>
       <form>
         <input type="text" value={this.props.comment} onChange={(event) => this.props.updateFormComment(event)} />
+        <button onClick={(event) => this.props.handleCommentSubmit(event)} >Submit</button>
 
       </form>
 

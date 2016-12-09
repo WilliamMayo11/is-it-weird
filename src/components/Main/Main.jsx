@@ -16,6 +16,7 @@ class Main extends Component {
           quote={this.props.quote}
           quotes={this.props.quotes}
           updateFormComment={this.props.updateFormComment.bind(this)}
+          handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
         />
       </div>
     );
