@@ -13,12 +13,30 @@ class App extends Component {
       quote: ''
     };
 }
-    updateFormQuote(e) {
-      this.setState({
-        quote: e.target.value
-    });
-    console.log(this.state.quote);
-    }
+
+  updateFormQuote(e) {
+    this.setState({
+      quote: e.target.value
+  });
+  console.log(this.state.quote);
+  }
+
+  handleFormSubmit() {
+    fetch('/db/quote', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        content: this.state.quote
+      })
+    })
+    .then(this.setState({
+      quote: ''
+    }))
+    // .then(this.getAllQuotes())
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
@@ -26,7 +44,8 @@ class App extends Component {
       <div>
         {this.props.children && React.cloneElement(this.props.children, {
           quote: this.state.quote,
-          updateFormQuote: (event) => this.updateFormQuote(event)
+          updateFormQuote: (event) => this.updateFormQuote(event),
+          handleFormSubmit: ()=> this.handleFormSubmit()
         })}
       </div>
       </div>

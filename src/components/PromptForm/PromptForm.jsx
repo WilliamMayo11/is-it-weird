@@ -7,10 +7,12 @@ import { Link } from 'react-router';
   return (
     <div>
       <h1>Is it weird that I...</h1>
+      <form>
         <input type="text" value={this.props.quote} onChange={this.props.updateFormQuote} />
         <Link to="Main">
-          <button>Submit</button>
+          <button onClick={this.props.handleFormSubmit} >Submit</button>
         </Link>
+      </form>
     </div>
     );
   }
