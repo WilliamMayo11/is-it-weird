@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 // const PromptForm = (props) => {
-  class Quote extends Component {
+  class QuoteItem extends Component {
     render() {
   return (
     <div>
-    <p>Quote Component</p>
-      <h3>{this.props.quote}</h3>
+      <p>Is it weird that I {this.props.content}?</p>
+
     </div>
     );
   }
 }
 
-export default Quote;
+export default QuoteItem;

@@ -3,6 +3,11 @@ import { Link } from 'react-router';
 
 // const PromptForm = (props) => {
   class PromptForm extends Component {
+
+  componentWillMount() {
+    this.props.getAllQuotes;
+  }
+
     render() {
   return (
     <div>

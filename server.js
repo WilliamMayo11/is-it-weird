@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const logger = require('morgan');
 
+require('dotenv').config({ silent: true });
+
 const dbRouter = require('./routes/db.js');
 
 const app = express();
