@@ -14,8 +14,8 @@ class App extends Component {
     this.state = {
       quote: '',
       quotes: [],
-      comment: ''
-
+      comment: '',
+      quote_id: ''
     };
 }
 
@@ -28,10 +28,19 @@ class App extends Component {
 
   updateFormComment(e) {
     this.setState({
-      comment: e.target.value
+      comment: e.target.value,
+      quote_id: e.target.id
   });
   console.log(this.state.comment);
   }
+
+  // updateQuoteId(e) {
+  //   let quote_id = Number.parseInt(e.target.id);
+  //   console.log(quote_id);
+  //   this.setState({
+  //     quote_id: quote_id,
+  //   });
+  // }
 
   handleQuoteSubmit() {
     fetch('/db/quote', {
@@ -58,7 +67,8 @@ class App extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-        content: this.state.comment
+        content: this.state.comment,
+        quote_id: this.state.quote_id
       })
     })
     .then(this.setState({
@@ -88,6 +98,7 @@ class App extends Component {
           quote: this.state.quote,
           quotes: this.state.quotes,
           comment: this.state.comment,
+          quote_id: this.state.quote_id,
           updateFormQuote: (event) => this.updateFormQuote(event),
           handleQuoteSubmit: ()=> this.handleQuoteSubmit(),
           getAllQuotes: ()=> this.getAllQuotes(),
@@ -99,5 +110,7 @@ class App extends Component {
     );
   }
 }
+
+// updateQuoteId: this.updateQuoteId.bind(this)
 
 export default App;

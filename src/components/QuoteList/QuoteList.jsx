@@ -11,15 +11,17 @@ class QuoteList extends Component {
     return this.props.quotes.map((quote, i) =>
       <QuoteItem
         key={i}
+        id={quote.id}
         content={quote.content}
         comment={this.props.comment}
+        quote_id={this.props.quote_id}
         updateFormComment={this.props.updateFormComment.bind(this)}
         handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
        />
     );
   }
 
-// {this.renderQuotes()}
+// updateQuoteId={this.props.updateQuoteId.bind(this)}
 
   render() {
     return(

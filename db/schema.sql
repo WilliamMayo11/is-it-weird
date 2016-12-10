@@ -17,9 +17,9 @@ CREATE TABLE comments (
   quote_id INTEGER
 );
 
--- ALTER TABLE ONLY comments
---   ADD CONSTRAINT quotes_id_fkey
---   FOREIGN KEY (quote_id)
---   REFERENCES quotes(id);
+ALTER TABLE ONLY comments
+  ADD CONSTRAINT quotes_id_fkey
+  FOREIGN KEY (quote_id)
+  REFERENCES quotes(id);
 
 COMMIT;

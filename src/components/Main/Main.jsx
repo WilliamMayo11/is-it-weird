@@ -15,6 +15,7 @@ class Main extends Component {
         <QuoteList
           quote={this.props.quote}
           quotes={this.props.quotes}
+          quote_id={this.props.quote_id}
           updateFormComment={this.props.updateFormComment.bind(this)}
           handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
         />
@@ -24,3 +25,6 @@ class Main extends Component {
 }
 
 export default Main;
+
+
+// updateQuoteId={this.props.updateQuoteId.bind(this)}
