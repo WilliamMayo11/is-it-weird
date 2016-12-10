@@ -14,7 +14,7 @@ class QuoteList extends Component {
         content={quote.content}
         comment={this.props.comment}
         updateFormComment={this.props.updateFormComment.bind(this)}
-        handleCommentSubmit={this.handleCommentSubmit.bind(this)}
+        handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
        />
     );
   }

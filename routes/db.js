@@ -12,7 +12,7 @@ router.get('/quotes', getAllQuotes, (req, res) => {
   res.json(res.quotes || []);
 });
 
-router.post('/comment/:id', addComment, (req, res) => {
+router.post('/comment', addComment, (req, res) => {
   res.json(res.rows);
 })
 

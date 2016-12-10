@@ -14,8 +14,7 @@ class App extends Component {
     this.state = {
       quote: '',
       quotes: [],
-      comment: '',
-      quote_id: ''
+      comment: ''
 
     };
 }
@@ -59,13 +58,11 @@ class App extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-        content: this.state.comment,
-        quote_id: this.state.quote_id
+        content: this.state.comment
       })
     })
     .then(this.setState({
-      comment: '',
-      quote_id: ''
+      comment: ''
     }))
     .catch(err => console.log(err));
   }
