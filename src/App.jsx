@@ -67,7 +67,7 @@ class App extends Component {
       },
       method: 'POST',
       body: JSON.stringify({
-        content: this.state.comment,
+        comment_content: this.state.comment,
         quote_id: this.state.quote_id
       })
     })

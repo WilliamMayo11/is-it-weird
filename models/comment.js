@@ -2,7 +2,7 @@ const db = require('../lib/dbConnect.js');
 
 function addComment(req, res, next) {
 
-  db.one(`INSERT INTO comments (content, quote_id) VALUES ($1, $2)`, [req.body.content, req.body.quote_id])
+  db.one(`INSERT INTO comments (comment_content, quote_id) VALUES ($1, $2)`, [req.body.comment_content, req.body.quote_id])
   .then(next())
   .catch(err => next(err));
 }

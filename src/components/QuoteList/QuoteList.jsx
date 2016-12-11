@@ -14,6 +14,7 @@ class QuoteList extends Component {
         id={quote.id}
         content={quote.content}
         comment={this.props.comment}
+        all_comments={quote.comments}
         quote_id={this.props.quote_id}
         updateFormComment={this.props.updateFormComment.bind(this)}
         handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
