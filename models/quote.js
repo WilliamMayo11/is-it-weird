@@ -8,8 +8,13 @@ function addQuote(req, res, next) {
 
 function getAllQuotes(req, res, next) {
   console.log('models/quote getAllQuotes function');
-  db.any(`SELECT * FROM quotes;`)
+  db.any(`SELECT
+          q.*,
+          row_to_json(c.*) as comments
+          FROM quotes q
+          INNER JOIN comments c USING(id);`)
   .then((quotes) => {
+    console.log(quotes);
     res.quotes = quotes;
     next();
   })
