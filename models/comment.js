@@ -7,16 +7,17 @@ function addComment(req, res, next) {
   .catch(err => next(err));
 }
 
-// function getAllQuotes(req, res, next) {
-//   console.log('models/quote getAllQuotes function');
-//   db.any(`SELECT * FROM quotes;`)
-//   .then((quotes) => {
-//     res.quotes = quotes;
-//     next();
-//   })
-//   .catch(error => next(error));
-// }
+function getAllComments(req, res, next) {
+  console.log('models/quote getAllComments function');
+  db.any(`SELECT * FROM comments;`)
+  .then((comments) => {
+    console.log(comments);
+    res.comments = comments;
+    next();
+  })
+  .catch(error => next(error));
+}
 
 module.exports = {
-  addComment
+  addComment, getAllComments
 }

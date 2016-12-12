@@ -15,6 +15,7 @@ class App extends Component {
       quote: '',
       quotes: [],
       comment: '',
+      comments: '',
       quote_id: ''
     };
 }
@@ -89,6 +90,18 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
+  getAllComments() {
+    fetch(`/db/comment`)
+    .then(r => r.json())
+    .then(data => {
+      this.setState({
+        comments: data
+      })
+      console.log(this.state.comments)
+    })
+    .catch(err => console.log(err));
+  }
+
 
   render() {
     return (
@@ -102,6 +115,7 @@ class App extends Component {
           updateFormQuote: (event) => this.updateFormQuote(event),
           handleQuoteSubmit: ()=> this.handleQuoteSubmit(),
           getAllQuotes: ()=> this.getAllQuotes(),
+          getAllComments: ()=> this.getAllComments(),
           updateFormComment: this.updateFormComment.bind(this),
           handleCommentSubmit: this.handleCommentSubmit.bind(this)
         })}

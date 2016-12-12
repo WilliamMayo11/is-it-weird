@@ -6,6 +6,7 @@ class Main extends Component {
 
   componentWillMount() {
     this.props.getAllQuotes();
+    this.props.getAllComments();
   }
 
   render() {
@@ -16,6 +17,7 @@ class Main extends Component {
           quote={this.props.quote}
           quotes={this.props.quotes}
           quote_id={this.props.quote_id}
+          comments={this.props.comments}
           updateFormComment={this.props.updateFormComment.bind(this)}
           handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
         />
