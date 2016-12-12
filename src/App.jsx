@@ -82,6 +82,7 @@ class App extends Component {
     fetch(`/db/quotes`)
     .then(r => r.json())
     .then(data => {
+      console.log('*****getAllQuotes****** App.jsx' + data);
       this.setState({
         quotes: data
       })

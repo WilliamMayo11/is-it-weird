@@ -16,15 +16,24 @@ class CommentItem extends Component {
     })
   }
 
-  // handleCommentLike() {
+  handleCommentLike(id) {
+    fetch(`/db/comment/like/${id}`, {
+      method: 'put'
+    })
+    .then(
+      this.setState({
+        num_of_likes: num_of_likes + 1
+      }))
+    .catch(err => console.log(err));
+  }
 
-  // }
+// <button onClick={this.handleCommentLike(this.props.id)}>Like!</button>
 
   render() {
     return(
-      <div className="comment-item">
+      <div className={style['comment-item']}>
         <p>{this.props.content}</p>
-        <p>likes: {this.state.num_of_likes}</p>
+        <p>Total Likes: {this.state.num_of_likes}</p>
       </div>
     )
   }

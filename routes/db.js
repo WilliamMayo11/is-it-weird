@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const { addQuote, getAllQuotes } = require('../models/quote');
-const { addComment, getAllComments } = require('../models/comment');
+const { addComment, getAllComments, likeComment } = require('../models/comment');
 
 router.post('/quote', addQuote, (req, res) => {
   res.json(res.rows);
@@ -18,6 +18,10 @@ router.post('/comment', addComment, (req, res) => {
 
 router.get('/comment', getAllComments, (req, res) => {
   res.json(res.comments || []);
+});
+
+router.get('/comment/like/:id', likeComment, (req, res) => {
+  res.json(res.likes || []);
 });
 
 module.exports = router;

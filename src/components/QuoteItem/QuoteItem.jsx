@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommentItem from '../CommentItem/CommentItem.jsx';
 import { Link } from 'react-router';
+import style from './QuoteItem.css';
 
 // const PromptForm = (props) => {
   class QuoteItem extends Component {
@@ -10,8 +11,9 @@ import { Link } from 'react-router';
         return (
             <CommentItem
               key={i}
-              content={comment.comment_content}
+              content={comment.content}
               num_of_likes={comment.num_of_likes}
+              id={comment.id}
             />
           );
       })
@@ -20,7 +22,7 @@ import { Link } from 'react-router';
   render() {
 
   return (
-    <div>
+    <div className={style['quote-container']}>
       <h3>Is it weird that I {this.props.content}?  (id={this.props.id})</h3>
 
       <div>
