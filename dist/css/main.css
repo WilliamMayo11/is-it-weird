@@ -1,3 +1,10 @@
+body {
+  background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;
+/*  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;*/
+  background-size: 25%;
+}
 .App__App___1o-Fp {
   text-align: center;
 }

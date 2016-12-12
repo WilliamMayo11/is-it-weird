@@ -15,7 +15,8 @@ function getAllQuotes(req, res, next) {
           q.num_of_flags,
           json_agg(c.*) as comments
           FROM quotes q
-          INNER JOIN comments c USING (id)
+          INNER JOIN comments c
+          ON quote.id = comment.quote_id
           GROUP BY q.id, q.content, q.name, q.num_of_flags;`)
   .then((quotes) => {
     console.log(quotes);
@@ -36,4 +37,6 @@ module.exports = {
 //           row_to_json(c.*) as comments
 //           FROM quotes q
 //           LEFT JOIN comments c USING(id);`
+
+
 
