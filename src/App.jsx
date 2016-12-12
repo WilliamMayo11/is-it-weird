@@ -15,7 +15,7 @@ class App extends Component {
       quote: '',
       quotes: [],
       comment: '',
-      comments: '',
+      comments: [],
       quote_id: ''
     };
 }
@@ -111,6 +111,7 @@ class App extends Component {
           quote: this.state.quote,
           quotes: this.state.quotes,
           comment: this.state.comment,
+          comments: this.state.comments,
           quote_id: this.state.quote_id,
           updateFormQuote: (event) => this.updateFormQuote(event),
           handleQuoteSubmit: ()=> this.handleQuoteSubmit(),

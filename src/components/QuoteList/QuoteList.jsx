@@ -8,16 +8,23 @@ class QuoteList extends Component {
   // }
 
   renderQuotes() {
-    return this.props.quotes.map((quote, i) =>
-      <QuoteItem
-        key={i}
-        id={quote.id}
-        content={quote.content}
-        comment={this.props.comment}
-        quote_id={this.props.quote_id}
-        updateFormComment={this.props.updateFormComment.bind(this)}
-        handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
-       />
+    return this.props.quotes.map((quote, i) => {
+      const commentsForQuote = this.props.comments.filter(comment => comment.quote_id === quote.id);
+      console.log(commentsForQuote);
+      return (
+        <QuoteItem
+          key={i}
+          id={quote.id}
+          content={quote.content}
+          comment={this.props.comment}
+          commentsForQuote={commentsForQuote}
+          quote_id={this.props.quote_id}
+          updateFormComment={this.props.updateFormComment.bind(this)}
+          handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
+         />
+       )
+    }
+
     );
   }
 

@@ -4,7 +4,7 @@ import QuoteList from '../QuoteList/QuoteList.jsx';
 
 class Main extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getAllQuotes();
     this.props.getAllComments();
   }
