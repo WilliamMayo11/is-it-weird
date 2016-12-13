@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import QuoteList from '../QuoteList/QuoteList.jsx';
 import style from './Main.css';
 
+
 class Main extends Component {
 
   componentDidMount() {
