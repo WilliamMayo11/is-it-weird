@@ -9,7 +9,7 @@ class QuoteList extends Component {
   // }
 
   renderQuotes() {
-    return this.props.quotes.reverse().map((quote, i) => {
+    return this.props.quotes.map((quote, i) => {
       const commentsForQuote = this.props.comments.filter(comment => comment.quote_id === quote.id);
       console.log(commentsForQuote);
       return (
@@ -33,8 +33,12 @@ class QuoteList extends Component {
 
   render() {
     return(
-      <div className={style['quote-container']}>
-        <div>
+      <div className={style['all-quotes']}>
+        <div className={style['subtitle-flex']}>
+          <h3 className={style['subtitle']}>Today's Weird Posts</h3>
+          <p>Scroll Down</p>
+        </div>
+        <div className={style['quote-container']}>
           {this.renderQuotes()}
         </div>
       </div>

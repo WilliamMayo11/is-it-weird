@@ -2,20 +2,71 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 300px;
+  width: 380px;
+  border: 1px solid black;
+  margin: 4px;
+}
+p {
+  padding: 4px;
+}
+.CommentItem__like-flex___1Y3Wj {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+button {
+  height: 15px;
+  width: 50px;
+  margin: 4px;
 }
 .QuoteItem__quote-container___3OuCn {
-  border: 1px solid black;
   width: 400px;
+  margin: 4px;
+  background-color: rgba(0, 0, 0, .1);
 }
 .QuoteItem__comment-container___1a4ui {
   border: 1px solid black;
   width: 400px;
 }
+.QuoteItem__prompt___1q16J {
+  padding: 4px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 20px;
+}
+input {
+  width: 380px;
+  height: 40px;
+  margin-bottom: 5px;
+  border: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+}
 .QuoteList__quote-container___1r4j8 {
   height: 70vh;
-  width: 500px;
+  width: 450px;
   overflow: auto;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.QuoteList__subtitle-flex___3Nnv_ {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+.QuoteList__subtitle___1ihPo {
+  font-family: 'Cutive Mono', monospace;
+  color: brown;
+  font-size: 22px;
+  padding: 15px;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 body {
   background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;

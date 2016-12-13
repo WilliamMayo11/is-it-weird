@@ -7,7 +7,7 @@ import style from './QuoteItem.css';
   class QuoteItem extends Component {
 
     renderComments() {
-      return this.props.commentsForQuote.map((comment, i) => {
+      return this.props.commentsForQuote.reverse().map((comment, i) => {
         return (
             <CommentItem
               key={i}
@@ -23,19 +23,15 @@ import style from './QuoteItem.css';
 
   return (
     <div className={style['quote-container']}>
-      <h3>Is it weird that I {this.props.content}?</h3>
-
-      <div>
-        {this.renderComments()}
-      </div>
-
+      <h3 className={style['prompt']}>Is it weird that I {this.props.content}?</h3>
       <p>Comment on this:</p>
       <form>
         <input type="text" value={this.props.comment} id={this.props.id} onChange={(event) => this.props.updateFormComment(event)} />
         <button onClick={(event) => this.props.handleCommentSubmit(event)} >Submit</button>
-
       </form>
-
+      <div>
+        {this.renderComments()}
+      </div>
     </div>
     );
   }

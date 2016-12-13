@@ -22,18 +22,21 @@ class CommentItem extends Component {
     })
     .then(
       this.setState({
-        num_of_likes: num_of_likes + 1
+        num_of_likes: this.num_of_likes + 1
       }))
     .catch(err => console.log(err));
   }
 
-// <button onClick={this.handleCommentLike(this.props.id)}>Like!</button>
+
 
   render() {
     return(
       <div className={style['comment-item']}>
         <p>{this.props.content}</p>
-        <p>Total Likes: {this.state.num_of_likes}</p>
+        <div className={style['like-flex']}>
+          <button onClick={() => this.handleCommentLike(this.props.id)}>Like!</button>
+          <p>Total Likes: {this.state.num_of_likes}</p>
+        </div>
       </div>
     )
   }

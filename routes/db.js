@@ -20,7 +20,7 @@ router.get('/comment', getAllComments, (req, res) => {
   res.json(res.comments || []);
 });
 
-router.get('/comment/like/:id', likeComment, (req, res) => {
+router.put('/comment/like/:id', likeComment, (req, res) => {
   res.json(res.likes || []);
 });
 
