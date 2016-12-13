@@ -13,7 +13,7 @@ CREATE TABLE quotes (
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   content VARCHAR,
-  num_of_likes INTEGER,
+  num_of_likes INTEGER NOT NULL DEFAULT 0,
   quote_id INTEGER
 );
 
