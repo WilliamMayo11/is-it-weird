@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import QuoteList from '../QuoteList/QuoteList.jsx';
+import style from './Main.css';
 
 class Main extends Component {
 
@@ -12,7 +13,9 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <h1>Main Page</h1>
+        <div className={style['title-box']}>
+          <h1 className={style['title']}>Is It Weird?</h1>
+        </div>
         <QuoteList
           quote={this.props.quote}
           quotes={this.props.quotes}

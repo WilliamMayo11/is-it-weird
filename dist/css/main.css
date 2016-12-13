@@ -12,6 +12,40 @@
   border: 1px solid black;
   width: 400px;
 }
+.QuoteList__quote-container___1r4j8 {
+  height: 70vh;
+  width: 500px;
+  overflow: auto;
+}
+body {
+  background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;
+/*  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;*/
+  background-size: 25%;
+}
+.Main__title___zF705 {
+  text-align: center;
+  color: brown;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 80px;
+  margin-top: 10px;
+}
+
+body {
+  background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;
+/*  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;*/
+  background-size: 25%;
+}
+.PromptForm__title___W9Ld1 {
+  text-align: center;
+  color: brown;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 80px;
+  margin-top: 10px;
+}
 .App__App___1o-Fp {
   text-align: center;
 }

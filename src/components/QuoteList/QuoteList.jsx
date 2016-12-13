@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import QuoteItem from '../QuoteItem/QuoteItem.jsx';
+import style from './QuoteList.css';
 
 class QuoteList extends Component {
 
@@ -8,7 +9,7 @@ class QuoteList extends Component {
   // }
 
   renderQuotes() {
-    return this.props.quotes.map((quote, i) => {
+    return this.props.quotes.reverse().map((quote, i) => {
       const commentsForQuote = this.props.comments.filter(comment => comment.quote_id === quote.id);
       console.log(commentsForQuote);
       return (
@@ -32,7 +33,7 @@ class QuoteList extends Component {
 
   render() {
     return(
-      <div>
+      <div className={style['quote-container']}>
         <div>
           {this.renderQuotes()}
         </div>

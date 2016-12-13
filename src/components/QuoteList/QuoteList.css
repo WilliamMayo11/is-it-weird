@@ -1,0 +1,5 @@
+.quote-container {
+  height: 70vh;
+  width: 500px;
+  overflow: auto;
+}

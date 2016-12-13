@@ -23,7 +23,7 @@ import style from './QuoteItem.css';
 
   return (
     <div className={style['quote-container']}>
-      <h3>Is it weird that I {this.props.content}?  (id={this.props.id})</h3>
+      <h3>Is it weird that I {this.props.content}?</h3>
 
       <div>
         {this.renderComments()}
