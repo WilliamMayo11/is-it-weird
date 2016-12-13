@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import QuoteItem from '../QuoteItem/QuoteItem.jsx';
+import style from './QuoteList.css';
 
 class QuoteList extends Component {
 
@@ -8,16 +9,23 @@ class QuoteList extends Component {
   // }
 
   renderQuotes() {
-    return this.props.quotes.map((quote, i) =>
-      <QuoteItem
-        key={i}
-        id={quote.id}
-        content={quote.content}
-        comment={this.props.comment}
-        quote_id={this.props.quote_id}
-        updateFormComment={this.props.updateFormComment.bind(this)}
-        handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
-       />
+    return this.props.quotes.map((quote, i) => {
+      const commentsForQuote = this.props.comments.filter(comment => comment.quote_id === quote.id);
+      console.log(commentsForQuote);
+      return (
+        <QuoteItem
+          key={i}
+          id={quote.id}
+          content={quote.content}
+          comment={this.props.comment}
+          commentsForQuote={commentsForQuote}
+          quote_id={this.props.quote_id}
+          updateFormComment={this.props.updateFormComment.bind(this)}
+          handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
+         />
+       )
+    }
+
     );
   }
 
@@ -25,8 +33,12 @@ class QuoteList extends Component {
 
   render() {
     return(
-      <div>
-        <div>
+      <div className={style['all-quotes']}>
+        <div className={style['subtitle-flex']}>
+          <h3 className={style['subtitle']}>Today's Weird Posts</h3>
+          <p>Scroll Down</p>
+        </div>
+        <div className={style['quote-container']}>
           {this.renderQuotes()}
         </div>
       </div>

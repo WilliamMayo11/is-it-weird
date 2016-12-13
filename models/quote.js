@@ -12,7 +12,7 @@ function getAllQuotes(req, res, next) {
           q.*,
           row_to_json(c.*) as comments
           FROM quotes q
-          INNER JOIN comments c USING(id);`)
+          LEFT JOIN comments c USING(id);`)
   .then((quotes) => {
     console.log(quotes);
     res.quotes = quotes;
@@ -25,3 +25,4 @@ module.exports = {
   addQuote,
   getAllQuotes
 }
+
