@@ -6,8 +6,7 @@ import { Route, IndexRoute } from 'react-router';
 
 module.exports = (
     <Route path="/" component={App} >
-
-      <Route path="/welcome" component={PromptForm} />
+      <IndexRoute path="/" component={PromptForm} />
       <Route path="/main" component={Main} />
     </Route>
   );

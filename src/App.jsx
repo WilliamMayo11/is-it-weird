@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/Main/Main.jsx';
+import { Link } from 'react-router';
 import PromptForm from './components/PromptForm/PromptForm.jsx';
 import QuoteList from './components/QuoteList/QuoteList.jsx';
 import QuoteItem from './components/QuoteItem/QuoteItem.jsx';
-import './App.css';
+import style from './App.css';
 
 class App extends Component {
 
@@ -107,21 +108,21 @@ class App extends Component {
   render() {
     return (
       <div>
-      <div>
-        {this.props.children && React.cloneElement(this.props.children, {
-          quote: this.state.quote,
-          quotes: this.state.quotes,
-          comment: this.state.comment,
-          comments: this.state.comments,
-          quote_id: this.state.quote_id,
-          updateFormQuote: (event) => this.updateFormQuote(event),
-          handleQuoteSubmit: ()=> this.handleQuoteSubmit(),
-          getAllQuotes: ()=> this.getAllQuotes(),
-          getAllComments: ()=> this.getAllComments(),
-          updateFormComment: this.updateFormComment.bind(this),
-          handleCommentSubmit: this.handleCommentSubmit.bind(this)
-        })}
-      </div>
+        <div>
+          {this.props.children && React.cloneElement(this.props.children, {
+            quote: this.state.quote,
+            quotes: this.state.quotes,
+            comment: this.state.comment,
+            comments: this.state.comments,
+            quote_id: this.state.quote_id,
+            updateFormQuote: (event) => this.updateFormQuote(event),
+            handleQuoteSubmit: ()=> this.handleQuoteSubmit(),
+            getAllQuotes: ()=> this.getAllQuotes(),
+            getAllComments: ()=> this.getAllComments(),
+            updateFormComment: this.updateFormComment.bind(this),
+            handleCommentSubmit: this.handleCommentSubmit.bind(this)
+          })}
+        </div>
       </div>
     );
   }
