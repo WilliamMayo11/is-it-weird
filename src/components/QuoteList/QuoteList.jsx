@@ -36,7 +36,10 @@ class QuoteList extends Component {
       <div className={style['all-quotes']}>
         <div className={style['subtitle-flex']}>
           <h3 className={style['subtitle']}>Today's Weird Posts</h3>
-          <p>Scroll Down</p>
+          <div className={style['scroll-flex']}>
+            <img src="http://i.imgur.com/wUiyXfi.png" alt="#" className={style['check-mark']}/>
+            <p className={style['scroll-p']}>scroll</p>
+          </div>
         </div>
         <div className={style['quote-container']}>
           {this.renderQuotes()}

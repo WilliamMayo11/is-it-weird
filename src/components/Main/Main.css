@@ -12,4 +12,8 @@ body {
   font-size: 80px;
   margin-top: 10px;
 }
-
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

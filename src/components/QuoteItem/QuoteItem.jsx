@@ -23,7 +23,7 @@ import style from './QuoteItem.css';
 
   return (
     <div className={style['quote-container']}>
-      <h3 className={style['prompt']}>Is it weird that I {this.props.content}?</h3>
+      <h3 className={style['prompt']}>"Is it weird that I {this.props.content}?"</h3>
       <p>Comment on this:</p>
       <form>
         <input type="text" value={this.props.comment} id={this.props.id} onChange={(event) => this.props.updateFormComment(event)} />

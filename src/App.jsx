@@ -77,6 +77,8 @@ class App extends Component {
       comment: ''
     }))
     .catch(err => console.log(err));
+    // this.getAllComments();
+    // this.getAllQuotes();
   }
 
   getAllQuotes() {
