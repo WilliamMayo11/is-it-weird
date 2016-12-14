@@ -31,15 +31,16 @@ class QuoteList extends Component {
 
 // updateQuoteId={this.props.updateQuoteId.bind(this)}
 
+          // <div className={style['scroll-flex']}>
+          //   <img src="http://i.imgur.com/wUiyXfi.png" alt="#" className={style['check-mark']}/>
+          //   <p className={style['scroll-p']}>scroll</p>
+          // </div>
+
   render() {
     return(
       <div className={style['all-quotes']}>
         <div className={style['subtitle-flex']}>
           <h3 className={style['subtitle']}>Today's Weird Posts</h3>
-          <div className={style['scroll-flex']}>
-            <img src="http://i.imgur.com/wUiyXfi.png" alt="#" className={style['check-mark']}/>
-            <p className={style['scroll-p']}>scroll</p>
-          </div>
         </div>
         <div className={style['quote-container']}>
           {this.renderQuotes()}

@@ -11,6 +11,11 @@ class CommentItem extends Component {
   }
 
   componentDidMount() {
+    this.props.getAllQuotes();
+    this.props.getAllComments();
+  }
+
+  componentDidMount() {
     this.setState({
       num_of_likes: this.props.num_of_likes
     })
@@ -22,7 +27,7 @@ class CommentItem extends Component {
     })
     .then(
       this.setState({
-        num_of_likes: this.num_of_likes + 1
+        num_of_likes: this.props.num_of_likes + 1
       }))
     .catch(err => console.log(err));
   }

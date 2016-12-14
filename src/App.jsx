@@ -61,33 +61,13 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
-  handleCommentSubmit() {
-    console.log('app.jsx handleCommentSubmit');
-    fetch('/db/comment', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        content: this.state.comment,
-        quote_id: this.state.quote_id
-      })
-    })
-    .then(this.setState({
-      comment: ''
-    }))
-    .catch(err => console.log(err));
-    // this.getAllComments();
-    // this.getAllQuotes();
-  }
-
   getAllQuotes() {
     fetch(`/db/quotes`)
     .then(r => r.json())
     .then(data => {
       console.log('*****getAllQuotes****** App.jsx' + data);
       this.setState({
-        quotes: data
+        quotes: data.reverse()
       })
       console.log(this.state.quotes)
     })
@@ -106,6 +86,25 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
+  handleCommentSubmit() {
+    console.log('app.jsx handleCommentSubmit');
+    fetch('/db/comment', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        content: this.state.comment,
+        quote_id: this.state.quote_id
+      })
+    })
+    .then(this.setState({
+      comment: ''
+    }))
+    .then(this.getAllQuotes())
+    .then(this.getAllComments())
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
