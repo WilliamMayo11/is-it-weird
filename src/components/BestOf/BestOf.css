@@ -27,7 +27,7 @@ p {
   width: 400px;
 }
 .subtitle {
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Special Elite', cursive;
   color: brown;
   font-size: 22px;
   padding: 15px;
@@ -39,6 +39,6 @@ p {
 }
 .prompt {
   padding: 4px;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Special Elite', cursive;
   font-size: 26px;
 }

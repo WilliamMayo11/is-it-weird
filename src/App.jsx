@@ -112,6 +112,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" />
         <div>
           {this.props.children && React.cloneElement(this.props.children, {
             quote: this.state.quote,

@@ -1,9 +1,5 @@
 body {
-  /*background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;*/
-/*  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50%;*/
-  /*background-size: 25%;*/
+  background: url("http://i.imgur.com/HpLLycZ.jpg");
 }
 .title {
   text-align: center;
@@ -26,4 +22,53 @@ body {
   position: fixed;
   height: 80vh;
   width: 50vw;
+}
+
+/*photos and tv on left side*/
+
+.photos-1 {
+  margin-top: -100px;
+  height: 250px;
+  width: 400px;
+}
+.photos-flex-1 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cholera {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 70px;
+  height: 200px;
+  width: 360px;
+  z-index: -1;
+}
+.frame-2 {
+  position: absolute;
+  margin-left: 70px;
+  height: 220px;
+  width: 360px;
+}
+.vid {
+  position: absolute;
+  height: 88px;
+  width: 144px;
+  z-index: -1;
+  margin-left: 40px;
+}
+.tv {
+  position: absolute;
+  height: 110px;
+  width: 180px;
+  display: block;
+  margin-left: 40px;
+}
+button {
+  background-color: #2f4f4f;
+  border: none;
+  color: white;
+  height: 20px;
+  width: 80px;
 }

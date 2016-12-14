@@ -17,9 +17,10 @@ import style from './PromptForm.css';
       <div>
       </div>
       <div className={style['prompt']}>
-        <h1>Is it weird that I...</h1>
+        <h1 className={style['prompt-text']}>Is it weird that I...</h1>
         <form>
           <input type="text" value={this.props.quote} onfocus={"this.value"} onChange={this.props.updateFormQuote} />
+          <br/>
           <Link to="Main">
             <button onClick={this.props.handleQuoteSubmit} >Submit</button>
           </Link>

@@ -18,7 +18,11 @@
   margin-top: 30px;
 }
 .prompt {
-  margin-top: 200px;
+  margin-top: 60vh;
+  text-align: center;
+}
+.prompt-text {
+  font-family: 'Special Elite', cursive;
 }
 .tag-line {
   margin-top: -50px;

@@ -1,7 +1,7 @@
 .quote-container {
   width: 400px;
   margin: 4px;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, .4);
 }
 .comment-container {
   border: 1px solid black;
@@ -9,7 +9,7 @@
 }
 .prompt {
   padding: 4px;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Special Elite', cursive;
   font-size: 26px;
 }
 input {

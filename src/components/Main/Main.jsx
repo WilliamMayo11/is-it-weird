@@ -22,7 +22,17 @@ class Main extends Component {
         <div className={style['title-box']}>
           <h1 className={style['title']}>Is It Weird?</h1>
         </div>
-        <div className={style["main-flex"]}>
+        <div className={style['main-flex']}>
+          <div className={style['photos-flex-1']}>
+            <div className={style['photos-1']}>
+              <img className={style['cholera']} src="http://i.imgur.com/vq4NsOC.jpg"/>
+              <img className={style['frame-2']} src="http://i.imgur.com/41uCthk.png"/>
+            </div>
+            <div className={style['videos-1']}>
+            <iframe className={style['vid']} width="560" height="315" src="https://www.youtube.com/embed/HYxsCWHaXRA?autoplay=1" frameborder="0" allowfullscreen></iframe>
+              <img className={style['tv']} src="http://i.imgur.com/bVDUL0c.png"/>
+            </div>
+          </div>
           <div className={style["news-feed"]}>
             <QuoteList
               quote={this.props.quote}
