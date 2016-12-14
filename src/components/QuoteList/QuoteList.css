@@ -4,6 +4,11 @@
   overflow: auto;
   box-shadow: 1px 1px 5px black;
   border-radius: 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -14,17 +19,12 @@
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
-.subtitle-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 400px;
-}
 .subtitle {
   font-family: 'Cutive Mono', monospace;
   color: brown;
   font-size: 22px;
   padding: 15px;
+  text-align: center;
 }
 .check-mark {
   height: 65px;

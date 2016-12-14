@@ -1,14 +1,14 @@
 body {
-  background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;
+  /*background: beige url('http://i.imgur.com/eDbjBIf.jpg') no-repeat fixed center;*/
 /*  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50%;*/
-  background-size: 25%;
+  /*background-size: 25%;*/
 }
 .title {
   text-align: center;
   color: brown;
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Special Elite', cursive;
   font-size: 80px;
   margin-top: 10px;
 }
@@ -16,4 +16,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.news-feed {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  height: 80vh;
+  width: 50vw;
 }

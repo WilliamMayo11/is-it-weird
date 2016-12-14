@@ -12,6 +12,10 @@ class Main extends Component {
     this.props.getAllComments();
   }
 
+          // <div>
+          //   <BestOf />
+          // </div>
+
   render() {
     return (
       <div>
@@ -19,7 +23,7 @@ class Main extends Component {
           <h1 className={style['title']}>Is It Weird?</h1>
         </div>
         <div className={style["main-flex"]}>
-          <div>
+          <div className={style["news-feed"]}>
             <QuoteList
               quote={this.props.quote}
               quotes={this.props.quotes}
@@ -28,9 +32,6 @@ class Main extends Component {
               updateFormComment={this.props.updateFormComment.bind(this)}
               handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
             />
-          </div>
-          <div>
-            <BestOf />
           </div>
         </div>
       </div>

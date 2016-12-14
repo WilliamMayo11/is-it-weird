@@ -26,7 +26,7 @@ import style from './QuoteItem.css';
       <h3 className={style['prompt']}>"Is it weird that I {this.props.content}?"</h3>
       <p>Comment on this:</p>
       <form>
-        <input type="text" value={this.props.comment} id={this.props.id} onChange={(event) => this.props.updateFormComment(event)} />
+        <input type="text" value={this.props.comment} onfocus={"this.value"} id={this.props.id} onChange={(event) => this.props.updateFormComment(event)} />
         <button onClick={(event) => this.props.handleCommentSubmit(event)} >Submit</button>
       </form>
       <div>

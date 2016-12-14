@@ -16,6 +16,7 @@ input {
   width: 380px;
   height: 40px;
   margin-bottom: 5px;
-  border: none;
+  border: .5px solid gray;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+  font-size: 16px;
 }

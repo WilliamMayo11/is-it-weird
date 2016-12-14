@@ -45,6 +45,7 @@ class App extends Component {
   // }
 
   handleQuoteSubmit() {
+    if (this.state.quote !== '') {
     fetch('/db/quote', {
       headers: {
         'Content-Type': 'application/json'
@@ -60,6 +61,7 @@ class App extends Component {
     // .then(this.getAllQuotes())
     .catch(err => console.log(err));
   }
+}
 
   getAllQuotes() {
     fetch(`/db/quotes`)
@@ -87,7 +89,7 @@ class App extends Component {
   }
 
   handleCommentSubmit() {
-    console.log('app.jsx handleCommentSubmit');
+    if (this.state.comment !== '') {
     fetch('/db/comment', {
       headers: {
         'Content-Type': 'application/json'
@@ -105,6 +107,7 @@ class App extends Component {
     .then(this.getAllComments())
     .catch(err => console.log(err));
   }
+}
 
   render() {
     return (

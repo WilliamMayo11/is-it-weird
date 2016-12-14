@@ -11,15 +11,20 @@ import style from './PromptForm.css';
 
   render() {
     return (
-      <div>
+      <div className={style['prompt-page']}>
       <h1 className={style['title']}>Is It Weird</h1>
+      <h3 className={style['tag-line']}>Go ahead... Ask.</h3>
+      <div>
+      </div>
+      <div className={style['prompt']}>
         <h1>Is it weird that I...</h1>
         <form>
-          <input type="text" value={this.props.quote} onChange={this.props.updateFormQuote} />
+          <input type="text" value={this.props.quote} onfocus={"this.value"} onChange={this.props.updateFormQuote} />
           <Link to="Main">
             <button onClick={this.props.handleQuoteSubmit} >Submit</button>
           </Link>
         </form>
+      </div>
       </div>
       );
   }
