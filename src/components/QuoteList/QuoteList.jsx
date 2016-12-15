@@ -41,6 +41,7 @@ class QuoteList extends Component {
       <div className={style['all-quotes']}>
         <div className={style['subtitle-flex']}>
           <h3 className={style['subtitle']}>Today's Weird Posts</h3>
+          <h4 className={style['feed']}>Feed &#8595;</h4>
         </div>
         <div className={style['quote-container']}>
           {this.renderQuotes()}

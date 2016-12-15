@@ -18,14 +18,26 @@
   margin-top: 30px;
 }
 .prompt {
-  margin-top: 60vh;
+  margin-top: 65vh;
   text-align: center;
 }
 .prompt-text {
   font-family: 'Special Elite', cursive;
+  margin-bottom: 0px;
+}
+.quote-input {
+  width: 480px;
 }
 .tag-line {
   margin-top: -50px;
   text-align: center;
   font-family: 'Special Elite', cursive;
+}
+@media (max-height: 600px) {
+  .prompt {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  }
 }
