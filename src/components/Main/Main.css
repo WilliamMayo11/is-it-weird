@@ -72,3 +72,19 @@ button {
   height: 20px;
   width: 80px;
 }
+
+/*photos right side*/
+
+.egg {
+  margin-top: 130px;
+  margin-left: -20vw;
+  height: 270px;
+  position: absolute;
+}
+.polaroid {
+  margin-top: 116px;
+  margin-left: -21vw;
+  height: 300px;
+  width: 200;
+  position: absolute;
+}

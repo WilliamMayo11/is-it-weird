@@ -43,6 +43,12 @@ class Main extends Component {
               handleCommentSubmit={this.props.handleCommentSubmit.bind(this)}
             />
           </div>
+          <div className={style['photos-flex-2']}>
+            <div>
+              <img className={style['egg']} src="http://i.imgur.com/eDbjBIf.jpg" />
+              <img className={style['polaroid']} src="http://i.imgur.com/LEHqAHd.png" />
+            </div>
+          </div>
         </div>
       </div>
     );
